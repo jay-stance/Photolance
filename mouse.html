@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.2-web/css/all.min.css">
+    <link rel="stylesheet" href="../themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="mouse.css">
+    <title>Jay's Mouse</title>
+</head>
+
+
+
+<body>
+    <h4>Jay Stance</h4>
+
+    <div class="top_controls">
+        <div class="top">
+            <button class="left_button">Copy</button>
+            <!-- <i class="ti ti-text"></i> -->
+            <button class=rright_button ">Paste</button>
+        </div>
+        <div class="bottom ">
+            <button class="back ">back</button>
+            <div class="middle ">
+                <p class="top ">20:42</p>
+                <div class="bottom ">
+                    <i class="fas fa-record-vinyl "></i>
+                    <i class="fas fa-play "></i>
+                    <!-- <i class="fas fa-pause "></i> -->
+                    <!-- <i class="fas fa-square "></i> -->
+                </div>
+            </div>
+            <button class="back ">front</button>
+        </div>
+    </div>
+
+    
+    <div class="row ">
+        <div id="joy1Div " style="width:200px;height:200px;margin:50px "></div>
+    </div>
+
+    
+
+    <div class="bottom_controls ">
+        <button class="left_click ">LC</button>
+        <button class="right_click ">RC</button>
+    </div>
+
+    
+    <script src="joy.js "></script>
+    <script type="text/javascript ">
+        // Create JoyStick object into the DIV 'joy1Div'
+        var Joy1 = new JoyStick('joy1Div ');
+
+
+        setInterval(function() {
+            Joy1.GetPosX();
+        }, 50);
+        setInterval(function() {
+            Joy1.GetPosY();
+        }, 50);
+        setInterval(function() {
+            Joy1.GetDir();
+        }, 50);
+        setInterval(function() {
+            Joy1.GetX();
+        }, 50);
+        setInterval(function() {
+            Joy1.GetY();
+        }, 50);
+
+        // Create JoyStick object into the DIV 'joy2Div'
+        var joy2Param = {
+            "title ": "joystick2 ",
+            "autoReturnToCenter ": false
+        };
+    </script>
+</body>
+
+</html>
